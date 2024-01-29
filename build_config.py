@@ -49,7 +49,7 @@ for i in range(pendant_count):
     material_info = input_group(
         '输入第' + str(i + 1) + '个挂件物料', [
             input('物料权重', name='probability', type=NUMBER, value=1),
-            input('物料宽高比', name='front_material_aspect_ratio', type=NUMBER, value=1),
+            input('物料宽高比', name='front_material_aspect_ratio', validate=number_validate, value=1),
             input('iOS物料路径', name='front_material_for_ios'),
             input('Android物料路径', name='front_material_for_android'),
             input('iOS兜底URL', name='front_material_url_for_ios'),
@@ -81,7 +81,7 @@ for i in range(egg_count):
                     'value': 2
                 }
             ]),
-            input('物料宽高比', name='ratio', type=NUMBER, value=1),
+            input('物料宽高比', validate=number_validate, name='ratio', value=1),
             input('iOS物料路径', name='material_for_ios'),
             input('Android物料路径', name='material_for_android')
         ]
