@@ -24,8 +24,8 @@ activity_info = input_group(
     "活动基础信息",
     [
         input("活动id", name="activity_id", validate=number_validate),
-        textarea("完全匹配的触发词，每行一个", name = 'equals_keywords_string', validate=not_blank_validate),
-        textarea("包含匹配的触发词，每行一个", name='include_keywords_string', validate=not_blank_validate),
+        textarea("完全匹配的触发词，每行一个", name = 'equals_keywords_string'),
+        textarea("包含匹配的触发词，每行一个", name='include_keywords_string'),
         input('挂件个数', name='pendant_count', validate=number_validate),
         input('彩蛋个数', name='egg_count', validate=number_validate)
     ]
