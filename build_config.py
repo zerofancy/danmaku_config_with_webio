@@ -3,9 +3,10 @@
 from pywebio.input import *
 from pywebio.output import *
 import json
+import re
 
 def number_validate(activity_id: str):
-    if not activity_id.isnumeric():
+    if not re.match(r'^-?\d+(?:\.\d+)?$', activity_id):
         return "Not a number."
     pass
 
