@@ -43,8 +43,8 @@ effect_range = {
     'effect_danmaku_include_list': include_keywords_array
 }
 
-pendant_materials = []
-egg_materials = []
+pendant_materials = {}
+egg_materials = {}
 
 for i in range(pendant_count):
     material_info = input_group(
@@ -57,7 +57,7 @@ for i in range(pendant_count):
             input('Android兜底URL', name='front_material_url_for_android')
         ]
     )
-    pendant_materials.append(material_info)
+    pendant_materials[str(i)] = material_info
 
 for i in range(egg_count):
     material_info =  input_group(
@@ -87,7 +87,7 @@ for i in range(egg_count):
             input('Android物料路径', name='material_for_android')
         ]
     )
-    egg_materials.append(material_info)
+    egg_materials[str[i]] =  material_info
 
 settings_struct = {}
 if pendant_count>0:
